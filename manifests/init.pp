@@ -30,6 +30,6 @@ class omd(
   
   package {"omd": name => "omd-$omd_version", ensure => $omd_release}
   ->
-  service {'omd': name => "$omd_service", enable => true, ensure => running}
+  service {'omd': name => "$omd_service", enable => true, ensure => running, provider=> init}
   
 }
